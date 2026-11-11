@@ -1,0 +1,25 @@
+# Buscadores: pueden indexar el portafolio, pero no el CV (trae teléfono y correo).
+User-agent: *
+Disallow: /cv/
+
+# Rastreadores que recolectan contenido para entrenar IA: no tienen permiso.
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
