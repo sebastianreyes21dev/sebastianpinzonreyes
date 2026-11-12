@@ -8,132 +8,236 @@
   <!-- Seguridad: solo recursos propios. Los encabezados completos (frame-ancestors, HSTS…) están en vercel.json -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="theme-color" content="#3d4cff">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-<header class="nav">
-  <div class="wrap nav-in">
-    <a href="#inicio" class="marca-nav"><span class="mono" aria-hidden="true">SP</span>Sebastián Pinzón</a>
-    <nav aria-label="Secciones">
-      <a href="#experiencia">Experiencia</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#habilidades">Habilidades</a>
-      <a href="#educacion">Educación</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-    <a class="btn btn-sm-nav" href="cv/Sebastian_Pinzon_Reyes_CV.pdf" download>Descargar CV</a>
+<!-- ============ PORTADA (azul eléctrico) ============ -->
+<header class="portada" id="inicio">
+  <!-- Formas decorativas -->
+  <div class="formas" aria-hidden="true">
+    <span class="f f1"></span><span class="f f2"></span><span class="f f3"></span>
+    <span class="f f4"></span><span class="f f5"></span><span class="f f6"></span>
   </div>
-</header>
 
-<main id="contenido">
+  <nav class="nav wrap" aria-label="Principal">
+    <a href="#inicio" class="logo"><span class="logo-sp">SP</span><span class="logo-txt">Sebastián Pinzón</span></a>
+    <div class="nav-links">
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#formacion">Formación</a>
+    </div>
+    <a href="#contacto" class="btn btn-blanco btn-nav">Hablemos</a>
+  </nav>
 
-<!-- PRESENTACIÓN -->
-<section id="inicio" class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="estado"><span class="punto" aria-hidden="true"></span>Disponible para trabajar · Bogotá o remoto</p>
-      <h1>Sebastián Pinzón Reyes</h1>
-      <p class="rol">Desarrollador Full Stack</p>
-      <p class="lead">Desde 2025 desarrollo software que está en producción para <strong>Sun Air Supply</strong>, una distribuidora de aire acondicionado en Estados Unidos: un sistema de garantías, solicitudes de crédito y un portal de piezas con app móvil. Antes trabajé en soporte TI, así que diseño pensando en la persona que va a usar el sistema todos los días.</p>
-      <div class="acciones">
-        <a class="btn" href="cv/Sebastian_Pinzon_Reyes_CV.pdf" download>Descargar CV <span class="peq">(PDF)</span></a>
-        <a class="btn btn-linea" href="#contacto">Contactarme</a>
+  <div class="wrap portada-grid" id="contenido">
+    <div class="portada-txt">
+      <p class="disponible"><span class="punto" aria-hidden="true"></span>Disponible para trabajar · Bogotá o remoto</p>
+      <p class="hola">Hola, soy</p>
+      <h1>Sebastián<br>Pinzón Reyes</h1>
+      <p class="rol"><span class="resalte">Desarrollador Full Stack</span></p>
+      <p class="intro">Construyo sistemas web y apps que una empresa usa todos los días. Desde 2025 desarrollo para <b>Sun Air Supply</b> en Estados Unidos: garantías, solicitudes de crédito y un portal de piezas con app móvil.</p>
+      <div class="botones">
+        <a class="btn btn-amarillo" href="cv/Sebastian_Pinzon_Reyes_CV.pdf" download>Descargar mi CV</a>
+        <a class="btn btn-borde" href="#proyectos">Ver proyectos</a>
       </div>
-      <ul class="redes">
-        <li><a href="https://github.com/sebastianreyes21dev" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://linkedin.com/in/sebastian-pinzon-reyes" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="#proyectos">Ver proyectos</a></li>
-      </ul>
     </div>
 
-    <aside class="ficha-rapida" aria-labelledby="ficha-tit">
-      <h2 id="ficha-tit" class="etiqueta">Resumen para reclutadores</h2>
-      <dl>
-        <div><dt>Cargo</dt><dd>Desarrollador Full Stack</dd></div>
-        <div><dt>Experiencia</dt><dd>Desarrollo de software desde 2025 · soporte TI 2024–2025</dd></div>
-        <div><dt>Stack principal</dt><dd>Next.js, React, TypeScript, Node.js, PostgreSQL</dd></div>
-        <div><dt>Formación</dt><dd>Tecnólogo en Análisis y Desarrollo de Software, SENA (2026)</dd></div>
-        <div><dt>Modalidad</dt><dd>Remoto, híbrido o presencial en Bogotá</dd></div>
-        <div><dt>Idiomas</dt><dd>Español nativo · Inglés básico</dd></div>
-      </dl>
-    </aside>
+    <div class="avatar-zona" aria-hidden="true">
+      <div class="avatar">
+        <span class="avatar-ini">SP</span>
+      </div>
+      <span class="anillo"></span>
+      <span class="chip-flota c1">Next.js</span>
+      <span class="chip-flota c2">React</span>
+      <span class="chip-flota c3">TypeScript</span>
+      <span class="chip-flota c4">PostgreSQL</span>
+      <div class="dato-flota">
+        <b>4</b>
+        <span>sistemas en<br>producción</span>
+      </div>
+    </div>
   </div>
 
+  <svg class="ola" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 64c120 32 240 48 360 40s240-40 360-48 240 8 360 24 240 24 360 16v24H0z" fill="#f5f6ff"/></svg>
+</header>
+
+<main>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section class="seccion" id="sobre-mi">
   <div class="wrap">
-    <ul class="hitos" aria-label="Datos destacados">
-      <li><b>4</b><span>sistemas en producción para Sun Air Supply</span></li>
-      <li><b>3</b><span>tiendas usan el portal de piezas</span></li>
-      <li><b>120+</b><span>usuarios atendidos en soporte TI</span></li>
-      <li><b>3 h → 1,5 h</b><span>de alistamiento por equipo en Editorial Planeta</span></li>
-    </ul>
+    <p class="etiqueta">Sobre mí</p>
+    <h2>Un desarrollador que viene de <span class="sub-amarillo">resolver problemas reales</span></h2>
+    <p class="lead">Antes de programar estuve del otro lado, atendiendo a las personas cuando algo fallaba. Por eso diseño cada pantalla pensando en quien la va a usar con prisa, sin manual y sin llamar a soporte.</p>
+
+    <div class="tarjetas-3">
+      <article class="tarjeta t-amarilla rv">
+        <span class="t-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Código en producción</h3>
+        <p>Cuatro sistemas que hoy usa una distribuidora de aire acondicionado en Estados Unidos, hechos con Next.js, React, TypeScript y PostgreSQL.</p>
+      </article>
+      <article class="tarjeta t-menta rv">
+        <span class="t-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2M4 14a2 2 0 012-2h1v6H6a2 2 0 01-2-2v-2zm16 0a2 2 0 00-2-2h-1v6h1a2 2 0 002-2v-2z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Experiencia en soporte TI</h3>
+        <p>Atendí a más de 120 usuarios y bajé el alistamiento de cada equipo de 3 horas a 1,5 en Editorial Planeta.</p>
+      </article>
+      <article class="tarjeta t-rosa rv">
+        <span class="t-icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5L2 9zm4 2v5c2 2 10 2 12 0v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>Tecnólogo titulado</h3>
+        <p>Tecnólogo en Análisis y Desarrollo de Software del SENA, titulado en julio de 2026, con formación adicional en ciberseguridad.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- EXPERIENCIA -->
-<section id="experiencia" class="section">
+<!-- ============ PROYECTOS ============ -->
+<section class="seccion seccion-alt" id="proyectos">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="etiqueta">Experiencia</p>
-      <h2>Dónde he trabajado</h2>
-    </header>
+    <p class="etiqueta">Proyectos</p>
+    <h2>Lo que he construido</h2>
+    <p class="lead">Los sistemas de Sun Air son privados, así que cada uno tiene una <b>demo con datos ficticios</b> que puedes probar aquí.</p>
 
-    <ol class="trabajos">
-      <li class="trabajo rv">
-        <div class="t-meta">
-          <p class="t-fecha">2025 — Actualidad</p>
-          <p class="t-lugar">Remoto · Estados Unidos</p>
+    <div class="bento">
+      <!-- Garantías (grande) -->
+      <article class="proy p-azul grande rv">
+        <div class="proy-txt">
+          <p class="proy-ctx">Sun Air Supply · En producción</p>
+          <h3>Sistema de garantías</h3>
+          <p>Registro de reclamos, aprobación por roles, escalamiento automático de casos inactivos y certificados en PDF.</p>
+          <ul class="chips"><li>Next.js 15</li><li>TypeScript</li><li>PostgreSQL</li><li>JWT</li></ul>
+          <button type="button" class="btn btn-demo" data-abrir="dlg-garantias" commandfor="dlg-garantias" command="show-modal">Probar demo</button>
         </div>
-        <div class="t-cuerpo">
-          <h3>Desarrollador de Software</h3>
-          <p class="t-empresa">Sun Air Supply</p>
+        <div class="mini mini-dash" aria-hidden="true">
+          <div class="mini-kpis"><i></i><i></i><i class="rojo"></i></div>
+          <div class="mini-fila"><b></b><s class="am"></s></div>
+          <div class="mini-fila"><b></b><s class="az"></s></div>
+          <div class="mini-fila"><b></b><s class="ve"></s></div>
+          <div class="mini-fila"><b></b><s class="am"></s></div>
+        </div>
+      </article>
+
+      <!-- C.O.D. -->
+      <article class="proy p-teal rv">
+        <p class="proy-ctx">Sun Air Supply · En producción</p>
+        <h3>Solicitud de cuenta C.O.D.</h3>
+        <p>Formulario por pasos con firma digital y carga de documentos desde el celular con un código QR.</p>
+        <ul class="chips"><li>Next.js</li><li>Zod</li><li>PostgreSQL</li></ul>
+        <button type="button" class="btn btn-demo" data-abrir="dlg-cod" commandfor="dlg-cod" command="show-modal">Probar demo</button>
+      </article>
+
+      <!-- Piezas -->
+      <article class="proy p-coral rv">
+        <p class="proy-ctx">Sun Air Supply · En producción</p>
+        <h3>Portal de piezas</h3>
+        <p>App móvil para clientes y portal web para tres tiendas, con chat en tiempo real.</p>
+        <ul class="chips"><li>Expo</li><li>React Native</li><li>Supabase</li></ul>
+        <button type="button" class="btn btn-demo" data-abrir="dlg-piezas" commandfor="dlg-piezas" command="show-modal">Probar demo</button>
+      </article>
+
+      <!-- Sitio -->
+      <article class="proy p-verde rv">
+        <p class="proy-ctx">Sun Air Supply · En producción</p>
+        <h3>Sitio y registro de equipos</h3>
+        <p>Sitio corporativo con registro de garantía de 10 años en 3 pasos y consulta por número de serie.</p>
+        <ul class="chips"><li>Next.js 14</li><li>Tailwind</li><li>Playwright</li></ul>
+        <button type="button" class="btn btn-demo" data-abrir="dlg-sitio" commandfor="dlg-sitio" command="show-modal">Probar demo</button>
+      </article>
+
+      <!-- FinancacSR -->
+      <article class="proy p-morado rv">
+        <p class="proy-ctx">Proyecto personal</p>
+        <h3>FinancacSR</h3>
+        <p>Gestor financiero con ingresos en USD, gastos en COP y la tasa TRM sincronizada. Autenticación con PBKDF2.</p>
+        <ul class="chips"><li>React</li><li>Vite</li><li>Express</li></ul>
+      </article>
+
+      <!-- Parqueadero (ancho completo) -->
+      <article class="proy p-negro grande ancho rv">
+        <div class="proy-txt">
+          <p class="proy-ctx">Aplicación de escritorio para Windows</p>
+          <h3>Parqueadero de motos</h3>
+          <p>Entradas, salidas, caja y cobro por minuto con tarifa nocturna, tope por 24 horas y copias de seguridad automáticas.</p>
+          <ul class="chips"><li>Electron</li><li>JavaScript</li><li>Pruebas automáticas</li></ul>
+          <button type="button" class="btn btn-demo" data-abrir="dlg-parqueadero" commandfor="dlg-parqueadero" command="show-modal">Probar demo</button>
+        </div>
+        <div class="mini mini-tiquete" aria-hidden="true">
+          <p>PARQUEADERO</p>
+          <b>ABC 12D</b>
+          <span>45 min · día</span>
+          <strong>$3.600</strong>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCIA ============ -->
+<section class="seccion" id="experiencia">
+  <div class="wrap">
+    <p class="etiqueta">Experiencia</p>
+    <h2>Dónde he trabajado</h2>
+
+    <ol class="linea">
+      <li class="paso rv">
+        <span class="paso-punto pp-azul" aria-hidden="true"></span>
+        <div class="paso-tarjeta">
+          <div class="paso-cab">
+            <div>
+              <h3>Desarrollador de Software</h3>
+              <p class="empresa">Sun Air Supply · Remoto (Estados Unidos)</p>
+            </div>
+            <span class="fecha f-azul">2025 — Hoy</span>
+          </div>
           <ul class="logros">
-            <li>Desarrollé el sistema de garantías con Next.js 15, React y TypeScript: registro de reclamos, aprobación por roles y escalamiento automático con cron jobs en Vercel.</li>
-            <li>Construí la API REST y Server Actions con autenticación JWT en cookies HTTP-only y control de acceso por roles.</li>
-            <li>Diseñé la base de datos PostgreSQL en Neon con 14 tablas (reclamos, usuarios, sesiones, notificaciones) y conexión con SSL.</li>
-            <li>Hice el sistema de solicitud de cuenta C.O.D. con firmas digitales, carga de documentos desde el celular por código QR y un tablero de revisión para el equipo de crédito.</li>
-            <li>Desarrollé un portal de piezas para tres tiendas: app móvil con Expo / React Native y portal web con Supabase.</li>
-            <li>Generé certificados en PDF, formularios validados con React Hook Form y Zod, y correos transaccionales con Postmark.</li>
-          </ul>
-          <ul class="tags" aria-label="Tecnologías">
-            <li>Next.js</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Supabase</li><li>Expo</li><li>Vercel</li>
+            <li>Desarrollé el sistema de garantías con Next.js 15, React y TypeScript: reclamos, aprobación por roles y escalamiento automático con cron jobs en Vercel.</li>
+            <li>Construí la API REST y Server Actions con JWT en cookies HTTP-only y control de acceso por roles.</li>
+            <li>Diseñé la base de datos PostgreSQL en Neon con 14 tablas y conexión segura con SSL.</li>
+            <li>Hice la solicitud de cuenta C.O.D. con firmas digitales, carga de documentos por QR y tablero para el equipo de crédito.</li>
+            <li>Desarrollé un portal de piezas para tres tiendas: app móvil con Expo y portal web con Supabase.</li>
           </ul>
         </div>
       </li>
-
-      <li class="trabajo rv">
-        <div class="t-meta">
-          <p class="t-fecha">2024 — 2025</p>
-          <p class="t-lugar">Bogotá</p>
-        </div>
-        <div class="t-cuerpo">
-          <h3>Auxiliar de Sistemas · Aprendiz SENA</h3>
-          <p class="t-empresa">Editorial Planeta Colombiana S.A.</p>
+      <li class="paso rv">
+        <span class="paso-punto pp-menta" aria-hidden="true"></span>
+        <div class="paso-tarjeta">
+          <div class="paso-cab">
+            <div>
+              <h3>Auxiliar de Sistemas · Aprendiz SENA</h3>
+              <p class="empresa">Editorial Planeta Colombiana · Bogotá</p>
+            </div>
+            <span class="fecha f-menta">2024 — 2025</span>
+          </div>
           <ul class="logros">
-            <li>Di soporte a más de 120 usuarios presenciales y remotos, con unos 25 tickets semanales gestionados en GLPI.</li>
-            <li>Instalé y configuré 40 equipos con imagen corporativa y reduje el tiempo de alistamiento de 3 h a 1,5 h por equipo.</li>
-            <li>Administré usuarios en Active Directory e hice mantenimiento preventivo de hardware y software.</li>
-            <li>Automaticé el control de inventario en Excel con Python.</li>
-          </ul>
-          <ul class="tags" aria-label="Tecnologías">
-            <li>GLPI</li><li>Active Directory</li><li>Windows</li><li>Python</li><li>Excel</li>
+            <li>Soporte a más de 120 usuarios, con unos 25 tickets semanales en GLPI.</li>
+            <li>Instalé 40 equipos con imagen corporativa y bajé el alistamiento de 3 h a 1,5 h.</li>
+            <li>Administré usuarios en Active Directory y automaticé el inventario con Python.</li>
           </ul>
         </div>
       </li>
-
-      <li class="trabajo rv">
-        <div class="t-meta">
-          <p class="t-fecha">2021 — 2022</p>
-          <p class="t-lugar">Bogotá</p>
-        </div>
-        <div class="t-cuerpo">
-          <h3>Auxiliar Logístico y de Oficina</h3>
-          <p class="t-empresa">Liberty S.A.S. (Tomas and Greg)</p>
+      <li class="paso rv">
+        <span class="paso-punto pp-rosa" aria-hidden="true"></span>
+        <div class="paso-tarjeta">
+          <div class="paso-cab">
+            <div>
+              <h3>Auxiliar Logístico y de Oficina</h3>
+              <p class="empresa">Liberty S.A.S. · Bogotá</p>
+            </div>
+            <span class="fecha f-rosa">2021 — 2022</span>
+          </div>
           <ul class="logros">
-            <li>Llevé el control de inventario de entrada y organicé el archivo documental.</li>
+            <li>Control de inventario de entrada y organización del archivo documental.</li>
           </ul>
         </div>
       </li>
@@ -141,353 +245,79 @@
   </div>
 </section>
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="section alt">
+<!-- ============ HABILIDADES ============ -->
+<section class="seccion seccion-alt" id="habilidades">
   <div class="wrap">
-    <header class="sec-head">
-      <p class="etiqueta">Proyectos</p>
-      <h2>Lo que he construido</h2>
-      <p class="sub">Los sistemas de Sun Air son privados, así que cada uno tiene una <strong>demo con datos ficticios</strong> que puedes abrir y probar aquí mismo.</p>
-    </header>
-
-    <div class="proyectos">
-
-      <!-- 1. Garantías -->
-      <article class="proyecto rv">
-        <header class="p-head">
-          <p class="p-ctx">Sun Air Supply · En producción</p>
-          <h3>Sistema de garantías</h3>
-        </header>
-        <dl class="p-caso">
-          <div><dt>Necesidad</dt><dd>Gestionar los reclamos de garantía de los vendedores con aprobaciones claras y sin que ningún caso quede olvidado.</dd></div>
-          <div><dt>Qué hice</dt><dd>Un sistema con registro de reclamos, aprobación por roles, escalamiento automático de casos inactivos y certificados en PDF.</dd></div>
-          <div><dt>Detalles técnicos</dt><dd>JWT en cookies HTTP-only, control de acceso por rol, PostgreSQL en Neon y cron jobs en Vercel.</dd></div>
-        </dl>
-        <ul class="tags"><li>Next.js 15</li><li>React</li><li>TypeScript</li><li>PostgreSQL</li><li>Postmark</li></ul>
-        <details class="demo-det">
-          <summary>Probar demo interactiva</summary>
-          <div class="demo theme-warranty">
-            <div class="ventana">
-              <div class="ventana-bar"><i></i><i></i><i></i><span>garantías · datos ficticios</span></div>
-              <div class="mock-dash">
-                <aside class="side"><span class="dot"></span><i></i><i></i><i></i><i></i></aside>
-                <div class="dash-main">
-                  <div class="kpis">
-                    <div><small>Abiertos</small><strong>48</strong></div>
-                    <div><small>En revisión</small><strong>12</strong></div>
-                    <div class="warn"><small>Urgentes</small><strong>3</strong></div>
-                  </div>
-                  <div class="toolbar">
-                    <span>Reclamos</span>
-                    <select data-filter="warranty" aria-label="Filtrar por estado">
-                      <option value="all">Todos los estados</option>
-                      <option value="pending">Pendiente</option>
-                      <option value="review">En revisión</option>
-                      <option value="approved">Aprobado</option>
-                    </select>
-                  </div>
-                  <table>
-                    <thead><tr><th>Caso</th><th>Cliente (ficticio)</th><th>Estado</th></tr></thead>
-                    <tbody>
-                      <tr data-status="pending"><td>WR-1048</td><td>Ferretería Los Andes</td><td><span class="pill p-pending">Pendiente</span></td></tr>
-                      <tr data-status="review"><td>WR-1047</td><td>Climas del Norte</td><td><span class="pill p-review">En revisión</span></td></tr>
-                      <tr data-status="approved"><td>WR-1045</td><td>Servicio Térmico Sur</td><td><span class="pill p-ok">Aprobado</span></td></tr>
-                      <tr data-status="pending"><td>WR-1044</td><td>Distribuidora Lumen</td><td><span class="pill p-pending">Pendiente</span></td></tr>
-                      <tr data-status="review"><td>WR-1041</td><td>Aire Total Ltda.</td><td><span class="pill p-review">En revisión</span></td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </details>
-      </article>
-
-      <!-- 2. C.O.D. -->
-      <article class="proyecto rv">
-        <header class="p-head">
-          <p class="p-ctx">Sun Air Supply · En producción</p>
-          <h3>Solicitud de cuenta C.O.D.</h3>
-        </header>
-        <dl class="p-caso">
-          <div><dt>Necesidad</dt><dd>Que los negocios puedan pedir una cuenta de pago contra entrega en línea, con sus documentos y firma, y que el equipo de crédito las revise en un solo lugar.</dd></div>
-          <div><dt>Qué hice</dt><dd>Un formulario guiado por pasos, con firma digital y carga de documentos desde el celular escaneando un código QR.</dd></div>
-          <div><dt>Detalles técnicos</dt><dd>Validación con Zod y React Hook Form, PDF de la solicitud por correo y tablero de revisión para el equipo de crédito.</dd></div>
-        </dl>
-        <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Zod</li><li>Drizzle</li></ul>
-        <details class="demo-det">
-          <summary>Probar demo interactiva</summary>
-          <div class="demo theme-cod">
-            <div class="ventana">
-              <div class="ventana-bar"><i></i><i></i><i></i><span>solicitud C.O.D. · datos ficticios</span></div>
-              <div class="mock-cod">
-                <div class="wizard" data-steps="3">
-                  <div class="progress"><div class="bar"></div></div>
-                  <p class="step-count">Paso <b class="cur">1</b> de 3 · Información del negocio</p>
-                  <div class="step">
-                    <label>Razón social<input type="text" value="Refrigeración Demo S.A.S."></label>
-                    <label>Ciudad<input type="text" value="Atlanta, GA (ficticio)"></label>
-                  </div>
-                  <div class="step" hidden>
-                    <label>Tipo de licencia EPA
-                      <select><option>Tipo I</option><option>Tipo II</option><option>Universal</option></select>
-                    </label>
-                    <div class="upload">Escanea el QR para subir tu documento</div>
-                  </div>
-                  <div class="step" hidden>
-                    <p class="summary">Firma digital y confirmación. Al enviar, recibirás una copia en PDF.</p>
-                    <label class="check"><input type="checkbox"> Acepto los términos y la política de privacidad</label>
-                  </div>
-                  <div class="wiz-nav">
-                    <button type="button" class="btn-sm ghost-dark" data-prev>Atrás</button>
-                    <button type="button" class="btn-sm" data-next>Siguiente</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </details>
-      </article>
-
-      <!-- 3. Portal de piezas -->
-      <article class="proyecto rv">
-        <header class="p-head">
-          <p class="p-ctx">Sun Air Supply · En producción</p>
-          <h3>Portal de piezas para tres tiendas</h3>
-        </header>
-        <dl class="p-caso">
-          <div><dt>Necesidad</dt><dd>Que los clientes pidan un repuesto con foto y serial, y que cualquiera de las tres tiendas pueda responder o pasar el pedido a otra.</dd></div>
-          <div><dt>Qué hice</dt><dd>Una app móvil para clientes y un portal web para el personal, con chat en tiempo real y transferencia de pedidos entre tiendas.</dd></div>
-          <div><dt>Detalles técnicos</dt><dd>Un solo backend en Supabase (datos, cuentas, archivos y tiempo real) para la app de Expo y el portal web.</dd></div>
-        </dl>
-        <ul class="tags"><li>Expo</li><li>React Native</li><li>Supabase</li><li>TypeScript</li></ul>
-        <details class="demo-det">
-          <summary>Probar demo interactiva</summary>
-          <div class="demo theme-parts demo-centro">
-            <div class="phone">
-              <div class="phone-head">
-                <strong>Tienda Norte</strong>
-                <span class="status">Pieza #A-2291 · En chat</span>
-              </div>
-              <div class="chat" id="chat">
-                <div class="msg them">Hola, ¿qué modelo es tu unidad?</div>
-                <div class="msg me">Carrier 24 BTU, serial demo 24-0091</div>
-                <div class="msg them">Perfecto. Tenemos el compresor. Cotización: $185 (demo).</div>
-              </div>
-              <form class="chat-form" id="chat-form">
-                <input type="text" id="chat-input" placeholder="Escribe un mensaje…" autocomplete="off" maxlength="200" aria-label="Mensaje">
-                <button type="submit" aria-label="Enviar">➤</button>
-              </form>
-            </div>
-          </div>
-        </details>
-      </article>
-
-      <!-- 4. Sitio + registro -->
-      <article class="proyecto rv">
-        <header class="p-head">
-          <p class="p-ctx">Sun Air Supply · En producción</p>
-          <h3>Sitio corporativo y registro de equipos</h3>
-        </header>
-        <dl class="p-caso">
-          <div><dt>Necesidad</dt><dd>Que los clientes registren la garantía de 10 años de su equipo y la consulten después con el número de serie.</dd></div>
-          <div><dt>Qué hice</dt><dd>Un sitio responsive con catálogo, registro de garantía en 3 pasos y consulta por número de serie.</dd></div>
-          <div><dt>Detalles técnicos</dt><dd>Panel interno con filtros y exportación a Excel, pruebas end-to-end con Playwright y monitoreo con Sentry.</dd></div>
-        </dl>
-        <ul class="tags"><li>Next.js 14</li><li>Tailwind CSS</li><li>PostgreSQL</li><li>Playwright</li></ul>
-        <details class="demo-det">
-          <summary>Probar demo interactiva</summary>
-          <div class="demo theme-site">
-            <div class="ventana">
-              <div class="ventana-bar"><i></i><i></i><i></i><span>registro de equipo · datos ficticios</span></div>
-              <div class="mock-site">
-                <div class="site-bar"><strong>SunAir</strong><span>Catálogo · Distribuidores · Garantía</span></div>
-                <div class="wizard" data-steps="3">
-                  <div class="progress"><div class="bar"></div></div>
-                  <p class="step-count">Paso <b class="cur">1</b> de 3</p>
-                  <div class="step">
-                    <label>Nombre del cliente<input type="text" value="Juan Pérez (demo)"></label>
-                    <label>Contratista<input type="text" placeholder="Empresa instaladora"></label>
-                  </div>
-                  <div class="step" hidden>
-                    <label>Modelo del equipo
-                      <select><option>SA-24 Inverter</option><option>SA-36 Split</option></select>
-                    </label>
-                    <label>Número de serie<input type="text" placeholder="Ej. SA24-000123"></label>
-                  </div>
-                  <div class="step" hidden>
-                    <p class="summary">Revisa los datos y confirma el registro. Recibirás el certificado en PDF por correo.</p>
-                  </div>
-                  <div class="wiz-nav">
-                    <button type="button" class="btn-sm ghost-dark" data-prev>Atrás</button>
-                    <button type="button" class="btn-sm" data-next>Siguiente</button>
-                  </div>
-                </div>
-                <div class="lookup">
-                  <input type="text" id="serial" placeholder="Consultar serial" maxlength="20" aria-label="Número de serie">
-                  <button type="button" id="lookup-btn" class="btn-sm">Consultar</button>
-                  <p id="lookup-result" class="result" role="status"></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </details>
-      </article>
-
-      <!-- 5. Parqueadero -->
-      <article class="proyecto rv">
-        <header class="p-head">
-          <p class="p-ctx">Aplicación de escritorio para Windows</p>
-          <h3>Sistema de parqueadero de motos</h3>
-        </header>
-        <dl class="p-caso">
-          <div><dt>Necesidad</dt><dd>Cobrar por minuto con reglas exactas, llevar la caja y no perder datos si se va la luz.</dd></div>
-          <div><dt>Qué hice</dt><dd>Una app de escritorio para entradas, salidas, cobro y caja, con instalador para Windows.</dd></div>
-          <div><dt>Detalles técnicos</dt><dd>Tarifa de día y de noche, tope por 24 horas, escritura atómica de datos, copia diaria automática y pruebas de la lógica de cobro.</dd></div>
-        </dl>
-        <ul class="tags"><li>Electron</li><li>JavaScript</li><li>Node.js</li><li>Pruebas automáticas</li></ul>
-        <details class="demo-det">
-          <summary>Probar demo interactiva</summary>
-          <div class="demo theme-parking">
-            <div class="ventana">
-              <div class="ventana-bar"><i></i><i></i><i></i><span>Parqueadero Motos · datos ficticios</span></div>
-              <div class="mock-park">
-                <div class="park-head">
-                  <strong>Parqueadero Demo</strong>
-                  <span id="park-cap">0 / 12 puestos</span>
-                </div>
-                <div class="progress"><div class="bar" id="park-bar"></div></div>
-                <form id="park-in" class="park-form" autocomplete="off">
-                  <input type="text" id="park-plate" placeholder="Placa (ej. ABC12D)" maxlength="7" aria-label="Placa">
-                  <button type="submit" class="btn-sm">Registrar entrada</button>
-                </form>
-                <p id="park-msg" class="park-msg" role="status"></p>
-                <div class="park-sim">
-                  <label>Minutos que estuvo (simulado)
-                    <input type="number" id="park-min" min="0" max="10080" value="45">
-                  </label>
-                  <p class="park-rules">$80/min · gracia 5 min · tope $10.000 por 24 h · redondeo hacia abajo a $100 · noche (20:00–06:00) $50/min</p>
-                </div>
-                <ul id="park-list" class="park-list"></ul>
-                <div class="park-ticket" id="park-ticket" hidden></div>
-              </div>
-            </div>
-          </div>
-        </details>
-      </article>
-    </div>
-
-    <div class="otros">
-      <article class="otro rv">
-        <p class="p-ctx">Proyecto personal</p>
-        <h3>FinancacSR · gestor financiero</h3>
-        <p>Ingresos en USD y gastos en COP con sincronización de la tasa TRM, respaldo de datos por usuario y autenticación con PBKDF2 y salt.</p>
-        <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>Express</li></ul>
-      </article>
-      <article class="otro rv">
-        <p class="p-ctx">Editorial Planeta</p>
-        <h3>Inventario automatizado</h3>
-        <p>Script en Python que reemplazó el conteo manual del inventario del área de sistemas en Excel.</p>
-        <ul class="tags"><li>Python</li><li>Excel</li></ul>
-      </article>
-      <article class="otro rv">
-        <p class="p-ctx">Código abierto</p>
-        <h3>Repositorios en GitHub</h3>
-        <p>Proyectos académicos y de práctica con Node.js, NestJS, C#, Kotlin y Python.</p>
-        <a class="link" href="https://github.com/sebastianreyes21dev" target="_blank" rel="noopener">Ver mi GitHub →</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- HABILIDADES -->
-<section id="habilidades" class="section">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="etiqueta">Habilidades</p>
-      <h2>Con qué trabajo</h2>
-    </header>
+    <p class="etiqueta">Habilidades</p>
+    <h2>Mi caja de herramientas</h2>
     <div class="skills">
-      <div class="skill rv">
-        <h3>Frontend</h3>
-        <ul class="tags"><li>React</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>Tailwind CSS</li><li>HTML y CSS</li></ul>
-      </div>
-      <div class="skill rv">
-        <h3>Backend</h3>
-        <ul class="tags"><li>Node.js</li><li>Express</li><li>API REST</li><li>Server Actions</li><li>Autenticación JWT</li></ul>
-      </div>
-      <div class="skill rv">
-        <h3>Bases de datos</h3>
-        <ul class="tags"><li>PostgreSQL</li><li>Supabase</li><li>MySQL</li><li>Drizzle ORM</li></ul>
-      </div>
-      <div class="skill rv">
-        <h3>Móvil y escritorio</h3>
-        <ul class="tags"><li>React Native</li><li>Expo</li><li>Electron</li></ul>
-      </div>
-      <div class="skill rv">
-        <h3>Herramientas</h3>
-        <ul class="tags"><li>Git y GitHub</li><li>Vercel</li><li>Playwright</li><li>Zod</li><li>Python</li><li>Excel avanzado</li></ul>
-      </div>
-      <div class="skill rv">
-        <h3>Soporte TI</h3>
-        <ul class="tags"><li>Windows</li><li>Active Directory</li><li>GLPI</li><li>Redes</li><li>Microsoft 365</li><li>Ciberseguridad (fundamentos)</li></ul>
-      </div>
+      <div class="skill rv"><h3><span class="bola b-azul" aria-hidden="true"></span>Frontend</h3><ul class="chips"><li>React</li><li>Next.js</li><li>TypeScript</li><li>JavaScript</li><li>Tailwind CSS</li><li>HTML y CSS</li></ul></div>
+      <div class="skill rv"><h3><span class="bola b-coral" aria-hidden="true"></span>Backend</h3><ul class="chips"><li>Node.js</li><li>Express</li><li>API REST</li><li>Server Actions</li><li>JWT</li></ul></div>
+      <div class="skill rv"><h3><span class="bola b-menta" aria-hidden="true"></span>Datos</h3><ul class="chips"><li>PostgreSQL</li><li>Supabase</li><li>MySQL</li><li>Drizzle ORM</li></ul></div>
+      <div class="skill rv"><h3><span class="bola b-amarillo" aria-hidden="true"></span>Móvil y escritorio</h3><ul class="chips"><li>React Native</li><li>Expo</li><li>Electron</li></ul></div>
+      <div class="skill rv"><h3><span class="bola b-morado" aria-hidden="true"></span>Herramientas</h3><ul class="chips"><li>Git y GitHub</li><li>Vercel</li><li>Playwright</li><li>Zod</li><li>Python</li><li>Excel</li></ul></div>
+      <div class="skill rv"><h3><span class="bola b-rosa" aria-hidden="true"></span>Soporte y seguridad</h3><ul class="chips"><li>Windows</li><li>Active Directory</li><li>GLPI</li><li>Redes</li><li>Ciberseguridad</li></ul></div>
     </div>
-    <p class="blandas"><b>Habilidades blandas:</b> trabajo en equipo, resolución de problemas y aprendizaje continuo. Vengo de soporte, así que estoy acostumbrado a explicar lo técnico en palabras simples.</p>
+    <p class="idiomas"><b>Idiomas:</b> español nativo · inglés básico. <b>Blandas:</b> trabajo en equipo, resolución de problemas y aprendizaje continuo.</p>
   </div>
 </section>
 
-<!-- EDUCACIÓN -->
-<section id="educacion" class="section alt">
-  <div class="wrap edu-grid">
-    <header class="sec-head">
-      <p class="etiqueta">Educación</p>
-      <h2>Formación</h2>
-    </header>
-    <ul class="estudios">
-      <li class="rv">
+<!-- ============ FORMACIÓN ============ -->
+<section class="seccion" id="formacion">
+  <div class="wrap">
+    <p class="etiqueta">Formación</p>
+    <h2>Estudios y certificados</h2>
+    <div class="estudios">
+      <article class="estudio destacado rv">
+        <span class="sello-titulo">Titulado</span>
         <h3>Tecnólogo en Análisis y Desarrollo de Software</h3>
-        <p>SENA · Centro de Electricidad, Electrónica y Telecomunicaciones · Titulado en julio de 2026</p>
-      </li>
-      <li class="rv">
+        <p>SENA · Centro de Electricidad, Electrónica y Telecomunicaciones</p>
+        <p class="estudio-fecha">Julio de 2026</p>
+      </article>
+      <article class="estudio rv">
         <h3>Apropiación de Conceptos en Ciberseguridad</h3>
-        <p>SENA · 48 horas · 2026</p>
-      </li>
-      <li class="rv">
+        <p>SENA · 48 horas</p>
+        <p class="estudio-fecha">2026</p>
+      </article>
+      <article class="estudio rv">
+        <h3>Atención de una Persona con Afectación de la Salud</h3>
+        <p>SENA · 40 horas</p>
+        <p class="estudio-fecha">2023</p>
+      </article>
+      <article class="estudio rv">
         <h3>Bachiller Académico</h3>
-        <p>Colegio María Mercedes Carranza · 2019</p>
-      </li>
-      <li class="rv">
-        <h3>Acciones Básicas para la Atención de una Persona con Afectación de la Salud</h3>
-        <p>SENA · 40 horas · 2023</p>
-      </li>
-      <li class="rv">
-        <h3>Capacitación en Primeros Auxilios</h3>
-        <p>FUSDEC</p>
-      </li>
-      <li class="rv">
-        <h3>Socorrista (60 h)</h3>
-        <p>Defensa Civil Colombiana · 2014</p>
-      </li>
-    </ul>
+        <p>Colegio María Mercedes Carranza</p>
+        <p class="estudio-fecha">2019</p>
+      </article>
+      <article class="estudio rv">
+        <h3>Socorrista y primeros auxilios</h3>
+        <p>Defensa Civil Colombiana (60 h) · FUSDEC</p>
+        <p class="estudio-fecha">2014</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="section contacto">
-  <div class="wrap contacto-grid">
-    <div>
-      <p class="etiqueta">Contacto</p>
-      <h2>¿Tienes una vacante? Hablemos.</h2>
-      <p class="sub">Puedo trabajar en remoto, híbrido o presencial en Bogotá. Tengo vehículo propio y disponibilidad para viajar.</p>
-      <a class="btn" href="cv/Sebastian_Pinzon_Reyes_CV.pdf" download>Descargar CV <span class="peq">(PDF)</span></a>
+<!-- ============ CONTACTO ============ -->
+<section class="seccion" id="contacto">
+  <div class="wrap">
+    <div class="cta">
+      <div class="formas" aria-hidden="true"><span class="f f2"></span><span class="f f4"></span><span class="f f6"></span></div>
+      <div class="cta-txt">
+        <p class="etiqueta etiqueta-clara">Contacto</p>
+        <h2>¿Tienes una vacante? <span class="resalte">Hablemos.</span></h2>
+        <p>Puedo trabajar en remoto, híbrido o presencial en Bogotá. Tengo vehículo propio y disponibilidad para viajar.</p>
+        <div class="botones">
+          <a class="btn btn-amarillo" href="cv/Sebastian_Pinzon_Reyes_CV.pdf" download>Descargar mi CV</a>
+        </div>
+      </div>
+      <ul class="canales">
+        <li><span>Correo</span><a href="#contacto" id="mail" data-u="sebastian.pinzon.3954" data-d="gmail.com">Ver correo (requiere JavaScript)</a></li>
+        <li><span>Teléfono / WhatsApp</span><span id="tel" data-t="+57 302 668 3252">Disponible con JavaScript</span></li>
+        <li><span>LinkedIn</span><a href="https://linkedin.com/in/sebastian-pinzon-reyes" target="_blank" rel="noopener">sebastian-pinzon-reyes</a></li>
+        <li><span>GitHub</span><a href="https://github.com/sebastianreyes21dev" target="_blank" rel="noopener">sebastianreyes21dev</a></li>
+      </ul>
     </div>
-    <ul class="canales">
-      <li><span>Correo</span><a href="#contacto" id="mail" data-u="sebastian.pinzon.3954" data-d="gmail.com">Ver correo (requiere JavaScript)</a></li>
-      <li><span>Teléfono / WhatsApp</span><span id="tel" data-t="+57 302 668 3252">Disponible con JavaScript</span></li>
-      <li><span>LinkedIn</span><a href="https://linkedin.com/in/sebastian-pinzon-reyes" target="_blank" rel="noopener">linkedin.com/in/sebastian-pinzon-reyes</a></li>
-      <li><span>GitHub</span><a href="https://github.com/sebastianreyes21dev" target="_blank" rel="noopener">github.com/sebastianreyes21dev</a></li>
-    </ul>
   </div>
 </section>
 
@@ -495,10 +325,190 @@
 
 <footer class="pie">
   <div class="wrap pie-in">
-    <span>© <span id="year"></span> Sebastián Pinzón Reyes</span>
-    <span>Bogotá, Colombia</span>
+    <span class="logo"><span class="logo-sp">SP</span></span>
+    <span>© <span id="year"></span> Sebastián Pinzón Reyes · Bogotá, Colombia</span>
   </div>
 </footer>
+
+<!-- ============ DEMOS (ventanas modales) ============ -->
+<dialog id="dlg-garantias" class="dlg" closedby="any" aria-labelledby="t-garantias">
+  <div class="dlg-cab">
+    <div><p class="proy-ctx">Demo · datos ficticios</p><h2 id="t-garantias">Sistema de garantías</h2></div>
+    <button type="button" class="cerrar" data-cerrar commandfor="dlg-garantias" command="close" aria-label="Cerrar">✕</button>
+  </div>
+  <p class="dlg-desc">Filtra los reclamos por estado. En el sistema real cada caso tiene historial, aprobación por roles y certificado en PDF.</p>
+  <div class="demo theme-warranty">
+    <div class="ventana">
+      <div class="ventana-bar"><i></i><i></i><i></i><span>garantías</span></div>
+      <div class="mock-dash">
+        <aside class="side"><span class="dot"></span><i></i><i></i><i></i><i></i></aside>
+        <div class="dash-main">
+          <div class="kpis">
+            <div><small>Abiertos</small><strong>48</strong></div>
+            <div><small>En revisión</small><strong>12</strong></div>
+            <div class="warn"><small>Urgentes</small><strong>3</strong></div>
+          </div>
+          <div class="toolbar">
+            <span>Reclamos</span>
+            <select data-filter="warranty" aria-label="Filtrar por estado">
+              <option value="all">Todos los estados</option>
+              <option value="pending">Pendiente</option>
+              <option value="review">En revisión</option>
+              <option value="approved">Aprobado</option>
+            </select>
+          </div>
+          <table>
+            <thead><tr><th>Caso</th><th>Cliente (ficticio)</th><th>Estado</th></tr></thead>
+            <tbody>
+              <tr data-status="pending"><td>WR-1048</td><td>Ferretería Los Andes</td><td><span class="pill p-pending">Pendiente</span></td></tr>
+              <tr data-status="review"><td>WR-1047</td><td>Climas del Norte</td><td><span class="pill p-review">En revisión</span></td></tr>
+              <tr data-status="approved"><td>WR-1045</td><td>Servicio Térmico Sur</td><td><span class="pill p-ok">Aprobado</span></td></tr>
+              <tr data-status="pending"><td>WR-1044</td><td>Distribuidora Lumen</td><td><span class="pill p-pending">Pendiente</span></td></tr>
+              <tr data-status="review"><td>WR-1041</td><td>Aire Total Ltda.</td><td><span class="pill p-review">En revisión</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="dlg-cod" class="dlg" closedby="any" aria-labelledby="t-cod">
+  <div class="dlg-cab">
+    <div><p class="proy-ctx">Demo · datos ficticios</p><h2 id="t-cod">Solicitud de cuenta C.O.D.</h2></div>
+    <button type="button" class="cerrar" data-cerrar commandfor="dlg-cod" command="close" aria-label="Cerrar">✕</button>
+  </div>
+  <p class="dlg-desc">Avanza por los pasos. En el sistema real los documentos se suben desde el celular escaneando un QR y el equipo de crédito revisa todo en un tablero.</p>
+  <div class="demo theme-cod">
+    <div class="ventana">
+      <div class="ventana-bar"><i></i><i></i><i></i><span>solicitud C.O.D.</span></div>
+      <div class="mock-cod">
+        <div class="wizard" data-steps="3">
+          <div class="progress"><div class="bar"></div></div>
+          <p class="step-count">Paso <b class="cur">1</b> de 3 · Información del negocio</p>
+          <div class="step">
+            <label>Razón social<input type="text" value="Refrigeración Demo S.A.S."></label>
+            <label>Ciudad<input type="text" value="Atlanta, GA (ficticio)"></label>
+          </div>
+          <div class="step" hidden>
+            <label>Tipo de licencia EPA
+              <select><option>Tipo I</option><option>Tipo II</option><option>Universal</option></select>
+            </label>
+            <div class="upload">Escanea el QR para subir tu documento</div>
+          </div>
+          <div class="step" hidden>
+            <p class="summary">Firma digital y confirmación. Al enviar, recibirás una copia en PDF.</p>
+            <label class="check"><input type="checkbox"> Acepto los términos y la política de privacidad</label>
+          </div>
+          <div class="wiz-nav">
+            <button type="button" class="btn-sm ghost-dark" data-prev>Atrás</button>
+            <button type="button" class="btn-sm" data-next>Siguiente</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="dlg-piezas" class="dlg" closedby="any" aria-labelledby="t-piezas">
+  <div class="dlg-cab">
+    <div><p class="proy-ctx">Demo · datos ficticios</p><h2 id="t-piezas">Portal de piezas</h2></div>
+    <button type="button" class="cerrar" data-cerrar commandfor="dlg-piezas" command="close" aria-label="Cerrar">✕</button>
+  </div>
+  <p class="dlg-desc">Escríbele a la tienda. En la app real el cliente envía foto y serial, y si una tienda no tiene la pieza, pasa el pedido a otra.</p>
+  <div class="demo theme-parts demo-centro">
+    <div class="phone">
+      <div class="phone-head">
+        <strong>Tienda Norte</strong>
+        <span class="status">Pieza #A-2291 · En chat</span>
+      </div>
+      <div class="chat" id="chat">
+        <div class="msg them">Hola, ¿qué modelo es tu unidad?</div>
+        <div class="msg me">Carrier 24 BTU, serial demo 24-0091</div>
+        <div class="msg them">Perfecto. Tenemos el compresor. Cotización: $185 (demo).</div>
+      </div>
+      <form class="chat-form" id="chat-form">
+        <input type="text" id="chat-input" placeholder="Escribe un mensaje…" autocomplete="off" maxlength="200" aria-label="Mensaje">
+        <button type="submit" aria-label="Enviar">➤</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="dlg-sitio" class="dlg" closedby="any" aria-labelledby="t-sitio">
+  <div class="dlg-cab">
+    <div><p class="proy-ctx">Demo · datos ficticios</p><h2 id="t-sitio">Registro de equipos</h2></div>
+    <button type="button" class="cerrar" data-cerrar commandfor="dlg-sitio" command="close" aria-label="Cerrar">✕</button>
+  </div>
+  <p class="dlg-desc">Registra un equipo en 3 pasos o consulta una garantía con un serial de al menos 6 caracteres.</p>
+  <div class="demo theme-site">
+    <div class="ventana">
+      <div class="ventana-bar"><i></i><i></i><i></i><span>registro de equipo</span></div>
+      <div class="mock-site">
+        <div class="site-bar"><strong>SunAir</strong><span>Catálogo · Distribuidores · Garantía</span></div>
+        <div class="wizard" data-steps="3">
+          <div class="progress"><div class="bar"></div></div>
+          <p class="step-count">Paso <b class="cur">1</b> de 3</p>
+          <div class="step">
+            <label>Nombre del cliente<input type="text" value="Juan Pérez (demo)"></label>
+            <label>Contratista<input type="text" placeholder="Empresa instaladora"></label>
+          </div>
+          <div class="step" hidden>
+            <label>Modelo del equipo
+              <select><option>SA-24 Inverter</option><option>SA-36 Split</option></select>
+            </label>
+            <label>Número de serie<input type="text" placeholder="Ej. SA24-000123"></label>
+          </div>
+          <div class="step" hidden>
+            <p class="summary">Revisa los datos y confirma el registro. Recibirás el certificado en PDF por correo.</p>
+          </div>
+          <div class="wiz-nav">
+            <button type="button" class="btn-sm ghost-dark" data-prev>Atrás</button>
+            <button type="button" class="btn-sm" data-next>Siguiente</button>
+          </div>
+        </div>
+        <div class="lookup">
+          <input type="text" id="serial" placeholder="Consultar serial" maxlength="20" aria-label="Número de serie">
+          <button type="button" id="lookup-btn" class="btn-sm">Consultar</button>
+          <p id="lookup-result" class="result" role="status"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog id="dlg-parqueadero" class="dlg" closedby="any" aria-labelledby="t-parqueadero">
+  <div class="dlg-cab">
+    <div><p class="proy-ctx">Demo funcional · datos ficticios</p><h2 id="t-parqueadero">Parqueadero de motos</h2></div>
+    <button type="button" class="cerrar" data-cerrar commandfor="dlg-parqueadero" command="close" aria-label="Cerrar">✕</button>
+  </div>
+  <p class="dlg-desc">Registra una placa (por ejemplo ABC12D), elige cuántos minutos estuvo y cobra la salida. Usa las mismas reglas de cobro del sistema real.</p>
+  <div class="demo theme-parking">
+    <div class="ventana">
+      <div class="ventana-bar"><i></i><i></i><i></i><span>Parqueadero Motos</span></div>
+      <div class="mock-park">
+        <div class="park-head">
+          <strong>Parqueadero Demo</strong>
+          <span id="park-cap">0 / 12 puestos</span>
+        </div>
+        <div class="progress"><div class="bar" id="park-bar"></div></div>
+        <form id="park-in" class="park-form" autocomplete="off">
+          <input type="text" id="park-plate" placeholder="Placa (ej. ABC12D)" maxlength="7" aria-label="Placa">
+          <button type="submit" class="btn-sm">Registrar entrada</button>
+        </form>
+        <p id="park-msg" class="park-msg" role="status"></p>
+        <div class="park-sim">
+          <label>Minutos que estuvo (simulado)
+            <input type="number" id="park-min" min="0" max="10080" value="45">
+          </label>
+          <p class="park-rules">$80/min · gracia 5 min · tope $10.000 por 24 h · redondeo hacia abajo a $100 · noche (20:00–06:00) $50/min</p>
+        </div>
+        <ul id="park-list" class="park-list"></ul>
+        <div class="park-ticket" id="park-ticket" hidden></div>
+      </div>
+    </div>
+  </div>
+</dialog>
 
 <script src="script.js"></script>
 </body>

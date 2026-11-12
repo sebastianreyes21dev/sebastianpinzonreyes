@@ -34,6 +34,29 @@ const limpiar = (texto, max) => texto.replace(/[^\p{L}\p{N} ]/gu, "").trim().sli
 // Año del footer
 $("year").textContent = new Date().getFullYear();
 
+// ---------- Ventanas modales de las demos ----------
+// Los botones usan commandfor/command (nativo). Si el navegador no lo soporta,
+// se abren y cierran con data-abrir / data-cerrar.
+if (!("commandForElement" in HTMLButtonElement.prototype)) {
+  document.querySelectorAll("[data-abrir]").forEach((btn) => {
+    btn.addEventListener("click", () => $(btn.dataset.abrir)?.showModal());
+  });
+  document.querySelectorAll("[data-cerrar]").forEach((btn) => {
+    btn.addEventListener("click", () => btn.closest("dialog")?.close());
+  });
+}
+// closedby="any" cierra al tocar fuera; respaldo para navegadores sin soporte (Safari).
+if (!("closedBy" in HTMLDialogElement.prototype)) {
+  document.querySelectorAll("dialog.dlg").forEach((dlg) => {
+    dlg.addEventListener("click", (e) => {
+      if (e.target !== dlg) return;
+      const r = dlg.getBoundingClientRect();
+      const dentro = r.top <= e.clientY && e.clientY <= r.bottom && r.left <= e.clientX && e.clientX <= r.right;
+      if (!dentro) dlg.close();
+    });
+  });
+}
+
 // Reloj de Bogotá en la barra superior
 (function reloj() {
   const el = $("reloj");
